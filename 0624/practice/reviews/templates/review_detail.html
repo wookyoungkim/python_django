@@ -1,0 +1,10 @@
+<div>
+    <h1>제목: {{review.title}}</h1>
+    <p>내용: {{review.text}}</p>
+    <p>생성날짜: {{review.created_at}}</p>
+    <p>수정날짜: {{review.updated_at}}</p>
+    <br>
+</div>
+
+<a href="{% url 'reviews:update_review' review.id%}">글 수정</a>
+<a href="{% url 'reviews:delete_review' review.id%}">글 삭제</a>

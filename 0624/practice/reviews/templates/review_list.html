@@ -1,0 +1,9 @@
+{% for review in reviews %}
+<a href="{% url 'reviews:review_detail' review.id%}">
+    <div>
+        <h2>제목: {{review.title}}</h2>
+        <p><span>생성날짜: {{review.created_at}}</span></p>
+        <br>
+    </div>
+</a>
+{% endfor %}
